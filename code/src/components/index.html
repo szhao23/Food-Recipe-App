@@ -4,13 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Webpage Title -->
-    <title>Food Lover's Galore | Food Recipes when you need them</title>
+    <title>Food Lover's Galore | Food Recipe App</title>
     <!-- Import CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container"></div>
+    <!-- Header -->
+    <header>
+      <h1>Food Lover's Galore</h1>
+      <div class="search">
+        <input
+          type="text"
+          title="search"
+          id="searchInput"
+          placeholder="Enter your food here..."
+        />
+        <button id="searchButton" title="searchButton">Search</button>
+      </div>
+    </header>
+
+    <!-- Body -->
+    <div id="mealList" class="meal-list"></div>
+    <div class="modal-container">
+      <button id="recipeCloseBtn" class="close-button">&times;</button>
+      <div class="meal-details-content">
+        <!-- Data from JS will be imported here -->
+      </div>
+    </div>
+
     <!-- Import JS -->
-    <script src=""></script>
+    <script src="script.js"></script>
   </body>
 </html>
