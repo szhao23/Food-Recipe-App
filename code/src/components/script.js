@@ -52,3 +52,26 @@ async function getMealDetails(mealId) {
     console.log("Error when fetching meal details: ", error);
   }
 }
+
+// Display Meals in List Function
+function displayMeals(meals) {
+  mealList.innerHTML = "";
+  if (meals) {
+    meals.forEach((meal) => {
+      const mealItem = document.createElement("div");
+      mealItem.classList.add("meal-item");
+      mealItem.dataset.id = meal.idMeal;
+      mealItem.innerHTML = `
+            <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+            <h3>${meal.strMeal}</h3>
+            `;
+      mealList.appendChild(mealItem);
+    });
+  } else {
+    mealList.innerHTML =
+      "<p>No meals were able to be found... Try another ingredient!</p>";
+  }
+}
+
+// Function to Create and Display Meal Details on Popup
+function showMealDetailsPopup(meal) {}
