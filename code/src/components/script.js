@@ -30,7 +30,7 @@ mealList.addEventListener("click", async (e) => {
 async function searchMealsByIngredient(ingredient) {
   try {
     const response = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/filter.php?i=$(ingredient}`
+      `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
     );
     const data = await response.json();
     return data.meals;
@@ -41,3 +41,14 @@ async function searchMealsByIngredient(ingredient) {
 }
 
 // Function to Fetch Meal Details by ID
+async function getMealDetails(mealId) {
+  try {
+    const response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
+    );
+    const data = await response.json();
+    return data.meals[0];
+  } catch (error) {
+    console.log("Error when fetching meal details: ", error);
+  }
+}
