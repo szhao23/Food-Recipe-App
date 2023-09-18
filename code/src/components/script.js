@@ -1,7 +1,7 @@
 // Create and Store Variables
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
-const mealList = document.getElementById("meal-list");
+const mealList = document.getElementById("mealList");
 const modalContainer = document.getElementById("modal-container");
 const mealDetailsContent = document.getElementById("meal-details-content");
 const recipeCloseButton = document.getElementById("recipeCloseBtn");
