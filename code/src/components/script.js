@@ -94,3 +94,28 @@ function showMealDetailsPopup(meal) {
 }
 
 // Event Listener for Pop-up Close Buttin
+recipeCloseButton.addEventListener("click", closeRecipeModal);
+
+function closeRecipeModal() {
+  modalContainer.style.display = "none";
+}
+
+searchInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    performSearch();
+  }
+});
+
+async function performSearch() {
+  const ingredient = searchInput.value.trim();
+  if (ingredient) {
+    const meals = await searchMealsByIngredient(ingredient);
+    displayMeals(meals);
+  }
+}
+
+// Perform a quick search upon page loading
+window.addEventListener("load", () => {
+  searchInput.value = "chicken";
+  performSearch();
+});
