@@ -74,4 +74,23 @@ function displayMeals(meals) {
 }
 
 // Function to Create and Display Meal Details on Popup
-function showMealDetailsPopup(meal) {}
+function showMealDetailsPopup(meal) {
+  mealDetailsContent.innerHTML = `
+    <h2 class="recipe-title">${meal.strMeal}</h2>
+    <p class="recipe-category">${meal.strCategory}</p>
+    <div class="recipe-instruct">
+        <h3>Instructions:</h3>
+        <p>${meal.strInstructions}</p>
+    </div>
+    <div class="recipe-img">
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+    </div>
+    <div class="recipe-video">
+        <a href="${meal.strYoutube}"
+        target="_blank">Video Tutorial Guide</a>
+    </div>
+    `;
+  modalContainer.style.display = "block";
+}
+
+// Event Listener for Pop-up Close Buttin
