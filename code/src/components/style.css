@@ -103,4 +103,89 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 90%;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.modal-container .close-button {
+  font-size: 42px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.modal-container .close-button:hover {
+  color: #ff5722;
+}
+
+.meal-details-content {
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.recipe-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.recipe-category {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.recipe-instruct h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.recipe-instruct p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: justify;
+  padding: 18px;
+}
+
+.recipe-img img {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto 40px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.recipe-video {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.recipe-video a {
+  padding: 10px 20px;
+  background-color: #ff5722;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.recipe-video a:hover {
+  background-color: #e64a19;
 }
