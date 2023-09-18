@@ -2,8 +2,8 @@
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
 const mealList = document.getElementById("mealList");
-const modalContainer = document.getElementById("modal-container");
-const mealDetailsContent = document.getElementById("meal-details-content");
+const modalContainer = document.querySelector(".modal-container");
+const mealDetailsContent = document.querySelector(".meal-details-content");
 const recipeCloseButton = document.getElementById("recipeCloseBtn");
 
 // Event Listeners
